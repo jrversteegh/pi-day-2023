@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import time
 import random
 import os.path
@@ -11,7 +12,7 @@ M = 6000
 def get_samples():
     """ Make a list of N samples chosen from [2, M]
     """
-    random.seed(11235)  # Seed will be changed for the final scoring
+    random.seed()
     samples = random.sample(range(2, M+1), N)
     return sorted(samples)
 
@@ -37,8 +38,7 @@ if __name__ == '__main__':
     print("NAME\t\t\t\tRESULT\t  TIME\t  SIZE\t SCORE")
     for solution in [
             "pisano_example1",
-            "pisano_example2",
-            # add the name of your own module
+            "pisano",
     ]:
         result, runtime, file_size = do_test(solution, samples, reference)
         score = runtime + file_size

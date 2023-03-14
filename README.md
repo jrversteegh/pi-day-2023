@@ -16,6 +16,10 @@ Notes:
 ------
 
 - The implementation uses that input range is `2..6000`. `p(1)` will run into an infinite loop.
+- There are optimizations possible by observing that the pisano periods have various mathematical
+  properties, like for example that pisano periods for N>2 are even, but considering the small runtime,
+  the additional code size will not be compensated for. This might be different for a much larger
+  problem size however!
 - The `pisano_perf` module improves performance using multiprocessing, but only for large(r) N, e.g. for N=5999:
 
     NAME                            RESULT    TIME    SIZE   SCORE

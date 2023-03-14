@@ -7,10 +7,13 @@ Current performance on i7-6700K CPU @ 4.20GHz:
 
     NAME                            RESULT    TIME    SIZE   SCORE
     pisano_example1                   PASS       0   33004   33004
-    pisano_example2                   PASS  385491     794  386285
-    pisano                            PASS      56     160     216
+    pisano_example2                   PASS  399125     794  399919
+    pisano                            PASS      57     160     217
+    pisano_perf                       PASS      54     280     334
+
 
 Notes:
 ------
 
-- The implementation uses the that input range is `2..6000`. `p(1)` will run into an infinite loop.
+- The implementation uses that input range is `2..6000`. `p(1)` will run into an infinite loop.
+- The `pisano_perf` module improves performance using multiprocessing, but only for large(r) N

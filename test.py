@@ -40,6 +40,7 @@ if __name__ == '__main__':
             "pisano_example1",
             "pisano_example2",
             "pisano",
+            "pisano_perf",
     ]:
         result, runtime, file_size = do_test(solution, samples, reference)
         score = runtime + file_size

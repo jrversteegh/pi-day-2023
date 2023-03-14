@@ -1,13 +1,15 @@
 #!/usr/bin/env python
+import os
 import time
 import random
 import os.path
 import importlib
 import pisano_example1
 
-N = 400
+N = 400 if ('N' not in os.environ) else int(os.environ['N'])
 M = 6000
 
+examples = ["pisano_example1"] if ('IGNORE_EXAMPLE2' in os.environ) else ["pisano_example1", "pisano_example2"]
 
 def get_samples():
     """ Make a list of N samples chosen from [2, M]
@@ -37,8 +39,7 @@ if __name__ == '__main__':
 
     print(f"{'NAME':30s}{'RESULT':>8s}{'TIME':>8s}{'SIZE':>8s}{'SCORE':>8s}")
     for solution in [
-            "pisano_example1",
-            "pisano_example2",
+            *examples,
             "pisano",
             "pisano_perf",
     ]:

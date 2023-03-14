@@ -16,4 +16,9 @@ Notes:
 ------
 
 - The implementation uses that input range is `2..6000`. `p(1)` will run into an infinite loop.
-- The `pisano_perf` module improves performance using multiprocessing, but only for large(r) N
+- The `pisano_perf` module improves performance using multiprocessing, but only for large(r) N, e.g. for N=5999:
+
+    NAME                            RESULT    TIME    SIZE   SCORE
+    pisano_example1                   PASS       0   33004   33004
+    pisano                            PASS     901     160    1061
+    pisano_perf                       PASS     285     282     567

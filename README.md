@@ -8,7 +8,7 @@ Current performance on i7-6700K CPU @ 4.20GHz:
     NAME                            RESULT    TIME    SIZE   SCORE
     pisano_example1                   PASS       0   33004   33004
     pisano_example2                   PASS  385491     794  386285
-    pisano                            PASS      55     183     238
+    pisano                            PASS      56     160     216
 
 Notes:
 ------
